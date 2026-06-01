@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Header layout */
+.head {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* aligne les éléments en haut */
+    position: sticky; /* reste en haut lors du scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+.head h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    align-self: flex-start; /* assure que le titre est en haut à gauche */
+}
+
+.head nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: #fff;
+    color: #0F4F34;
+}
+.Acceuil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #3a4440;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Acceuil-text {
+    text-align: center;
+    color: #f7f4f4;
+    max-width: 600px;
+}
+
+.Acceuil-text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: #2ecc71; /* titre vert */
+}
+
+.Acceuil-text p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.A_propos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #3a4440;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.A_propos-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.A_propos-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Card wrapper for A_propos image */
+.A_propos-card {
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    max-width: 360px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: transform 0.1s linear, box-shadow 0.2s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+   
+}
+.A_propos-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
+.A_propos-text {
+    flex: 1;
+    color: #f7f4f4;
+    padding: 20px;
+}
+
+.A_propos-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.A_propos-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.Competences {
+    display: flex;
+    flex-direction: column; /* empile verticalement */
+    justify-content: space-between; /* texte en haut, cards en bas */
+    align-items: center;
+    min-height: 80vh;
+    background-color: #3a4440;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 40px 20px;
+}
+
+.Competences-text {
+    text-align: center;
+    color: #f7f4f4;
+    max-width: 600px;
+}
+.Competences-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.Competences-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.Competences-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.Competences-card {
+    background-color: rgba(15,25,35,0.65);
+    color: #333;
+    padding: 50px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+
+}
+.Competences-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.Competences-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Container usable as a row of image boxes */
+.Competences-image {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.Competences-image img {
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.Competences-card:hover {
+    background-color: #eff1f0;
+    color: #333;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Competences-card:hover h2 {
+    color: #0F4F34;
+}
+.Competences-card:hover p {
+    color: #0F4F34;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
