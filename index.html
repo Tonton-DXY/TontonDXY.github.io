@@ -1,64 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>DXY.Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sterge Dorsel MBADINGA — Développeur Web &amp; Mobile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="head">
-        <h1>DXY.Portfolio</h1>
-         <nav class="nav">
-          <a class="nav-link text-white px-3 py-2 rounded-lg transition-colors duration-200 hover:bg-white hover:text-[#0F4F34]" href="#Acceuil">Acceuil</a>
-          <a class="nav-link text-white px-3 py-2 rounded-lg transition-colors duration-200 hover:bg-white hover:text-[#0F4F34]" href="#A_propos">A propos</a>
-          <a class="nav-link text-white px-3 py-2 rounded-lg transition-colors duration-200 hover:bg-white hover:text-[#0F4F34]" href="#Competences">Competences</a>
-         </nav>
-    </header>
 
-    <section class="Acceuil" id="Acceuil">
-      <div class="Acceuil-text">
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Je suis un développeur passionné par la création de solutions innovantes et efficaces. <br> Mon objectif est de transformer des idées en applications fonctionnelles qui répondent aux besoins des utilisateurs.</p>
-       
-      </div>
-    </section>
-     <section class="A_propos" id="A_propos">
-      <div class="A_propos-image">
-        <div class="A_propos-card">
-          <img src="./src/img/photo-Portfolio.png" alt="Photo de portfolio">
+<header>
+  <nav class="nav wrap">
+    <a href="#accueil" class="logo">&lt;/<span>DXY</span>&gt;</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil" class="active">Accueil</a></li>
+      <li><a href="#apropos">A propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème" title="Basculer thème clair / sombre">☀</button>
+    <a href="#contact" class="nav-cta">Discutons</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">développeur web &amp; mobile</p>
+        <h1>Sterge Dorsel<br><span class="accent">MBADINGA MBADINGA</span></h1>
+        <p class="lead">Je conçois et développe des sites web et des applications mobiles rapides, soignées et pensées pour l'utilisateur — du premier croquis jusqu'à la mise en production.</p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn btn-primary">Voir mes projets →</a>
+          <a href="#contact" class="btn btn-ghost">Me contacter</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>1</strong><span>An d'expérience</span></div>
+          <div><strong>7+</strong><span>Projets livrés</span></div>
+          <div><strong>100%</strong><span>Code &amp; mobile</span></div>
         </div>
       </div>
-      <div class="A_propos-text">
-        <h1>Développeur <br>Front-end</h1>
-        <p>Je suis pasioné<br> par le domaine des nouvelles technologie! <br> Le developpement web & mobile, me donne l'occasion de mettre en pratique mon  intéret pour le developpement  des solutions qui facilites le quotidien.</p>
-       
+
+      <div class="terminal reveal">
+        <div class="terminal-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="fname">profil.js</span>
+        </div>
+        <div class="terminal-body">
+<div><span class="ln">1</span><span class="kw">const</span> <span class="fn">developpeur</span> = {</div>
+<div><span class="ln">2</span>&nbsp;&nbsp;nom: <span class="str">"Sterge Dorsel Mbadinga"</span>,</div>
+<div><span class="ln">3</span>&nbsp;&nbsp;role: <span class="str">"Développeur Web &amp; Mobile"</span>,</div>
+<div><span class="ln">4</span>&nbsp;&nbsp;stack: [<span class="str">"React"</span>, <span class="str">"Node.js"</span>],</div>
+<div><span class="ln">5</span>&nbsp;&nbsp;basé: <span class="str">"Libreville, Gabon"</span>,</div>
+<div><span class="ln">6</span>&nbsp;&nbsp;disponible: <span class="kw">true</span>,</div>
+<div><span class="ln">7</span>};</div>
+<div><span class="ln">8</span></div>
+<div><span class="ln">9</span><span class="cm">// &gt; </span><span id="typed-out"></span></div>
+        </div>
       </div>
-   </section>
-    <section class="Competences" id="Competences">
-        <div class="Competences-text">
-          <h1>Compétences</h1>
-          <p> Dans mon parcours j'ai eu a acquerir des compétences suivantes :</p>
-        
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="about" id="apropos">
+    <div class="wrap about-grid">
+      <div class="monogram-card reveal">
+        <img src="src/pp_portfolio.png" alt="">
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">à propos</p>
+        <h3>Le code, c'est de la précision au service d'une idée.</h3>
+        <p>Je m'appelle Sterge Dorsel Mbadinga, développeur web et mobile basé à Libreville. Je transforme des besoins concrets — un commerce, une prise de rendez-vous, un suivi d'activité — en produits numériques fiables, rapides et agréables à utiliser.</p>
+        <p>Que ce soit un site vitrine, une application web complète , j'attache autant d'importance à la qualité du code qu'à l'expérience de la personne qui l'utilise au quotidien.</p>
+        <div class="about-stats">
+          <div><div class="stat-num">1</div><div class="stat-label">An d'expérience</div></div>
+          <div><div class="stat-num">7+</div><div class="stat-label">Projets réalisés</div></div>
+          <div><div class="stat-num">5+</div><div class="stat-label">Clients satisfaits</div></div>
         </div>
-        <div class="Competences-cards">
-          <div class="Competences-card">
-            <h2>Réaliser une interface utilisateur web statique</h2>
-            <p>Conception et intégration d'interfaces utilisateur avec HTML5, CSS3 et des outils de design moderne.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUE JE FAIS -->
+  <section class="services">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow" style="justify-content:center;">services</p>
+        <h2>Ce que je fais</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">◆</div>
+          <h4>Développement Web</h4>
+          <p>Sites vitrines, applications web sur mesure et plateformes e-commerce, du design à la mise en ligne.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">▣</div>
+          <h4>Applications Mobiles</h4>
+          <p>Apps natives ou cross-platform, connectées à vos outils et bases de données.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">✎</div>
+          <h4>UI / UX Design</h4>
+          <p>Interfaces claires et intuitives, pensées pour guider l'utilisateur sans le perdre.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">⟲</div>
+          <h4>Maintenance &amp; Support</h4>
+          <p>Suivi après livraison, mises à jour, corrections et hébergement pour rester serein.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section class="skills" id="competences">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow" style="justify-content:center;">compétences</p>
+        <h2>Outils &amp; technologies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="ring" data-pct="95">
+            <svg viewBox="0 0 90 90"><circle class="track" cx="45" cy="45" r="40"></circle><circle class="bar" cx="45" cy="45" r="40"></circle></svg>
+            <div class="pct">95%</div>
           </div>
-          <div class="Competences-card">
-            <h2>Maîtriser les frameworks et bibliothèques front-end</h2>
-            <p>Développement d'applications mobiles avec les frameworks modernes de JavaScripts.</p>
+          <span class="label">HTML / CSS / JS</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="ring" data-pct="90">
+            <svg viewBox="0 0 90 90"><circle class="track" cx="45" cy="45" r="40"></circle><circle class="bar" cx="45" cy="45" r="40"></circle></svg>
+            <div class="pct">90%</div>
           </div>
-          <div class="Competences-card">
-            <h2>Gestion de Bases de Données</h2>
-            <p>Conception et gestion de bases de données efficaces pour stocker et récupérer des données de manière optimale.</p>
+          <span class="label">React / Next.js</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="ring" data-pct="85">
+            <svg viewBox="0 0 90 90"><circle class="track" cx="45" cy="45" r="40"></circle><circle class="bar" cx="45" cy="45" r="40"></circle></svg>
+            <div class="pct">85%</div>
+          </div>
+          <span class="label">Node.js</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="ring" data-pct="80">
+            <svg viewBox="0 0 90 90"><circle class="track" cx="45" cy="45" r="40"></circle><circle class="bar" cx="45" cy="45" r="40"></circle></svg>
+            <div class="pct">80%</div>
+          </div>
+          <span class="label">Bases de données</span>
+        </div>
+        <div class="skill-card reveal">
+          <div class="ring" data-pct="75">
+            <svg viewBox="0 0 90 90"><circle class="track" cx="45" cy="45" r="40"></circle><circle class="bar" cx="45" cy="45" r="40"></circle></svg>
+            <div class="pct">75%</div>
+          </div>
+          <span class="label">UI / UX Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODE -->
+  <section class="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">méthode</p>
+        <h2>Comment je travaille</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h4>Analyse &amp; cadrage</h4>
+          <p>Comprendre le besoin réel, définir les objectifs et le périmètre du projet.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <h4>Design &amp; prototype</h4>
+          <p>Maquettes, parcours utilisateur et validation avant d'écrire la moindre ligne de code.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <h4>Développement</h4>
+          <p>Code propre et testé, intégration continue, points d'étape réguliers.</p>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <h4>Déploiement &amp; suivi</h4>
+          <p>Mise en ligne, formation à l'usage, puis support dans la durée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section class="projects" id="projets">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow" style="justify-content:center;">projets</p>
+        <h2>Réalisations récentes</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-thumb" style="--pc1:#2a1c17;--pc2:#161517;">
+            <span class="tag mono">Web · E-commerce</span>
+            <span class="glyph">O'lo Store</span>
+          </div>
+          <div class="project-body">
+            <h4>O'lo Store</h4>
+            <p>Plateforme e-commerce complète avec paiement en ligne, gestion des stocks et chatbot intégré pour l'orientation Clients.</p>
+            <div class="stack"><span>Vite</span><span>Node.js</span><span>Mobile money</span></div>
           </div>
         </div>
-    </section>
-    <footer class="footer">
-      <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
-    </footer>
+        <div class="project-card reveal">
+          <div class="project-thumb" style="--pc1:#17241f;--pc2:#151717;">
+            <span class="tag mono">Mobile · Tech</span>
+            <span class="glyph">DevConnect</span>
+          </div>
+          <div class="project-body">
+            <h4>DevConnect</h4>
+            <p>Portail des developpeurs Web & mobile de la promotion 14 de l'école 241</p>
+            <div class="stack"><span>Next.js</span><span>Supabase</span><span>REST API</span></div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb" style="--pc1:#1c1a2a;--pc2:#161517;">
+            <span class="tag mono">Web · Santé</span>
+            <span class="glyph">Dymi</span>
+          </div>
+          <div class="project-body">
+            <h4>Dymi</h4>
+            <p>Plateforme de gestion médicale pour cliniques : dossiers patients, prise de rendez-vous et rappels automatiques.</p>
+            <div class="stack"><span>Next.js</span><span>Supabase</span><span>React</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STRIP -->
+  <section class="tech-strip">
+    <div class="wrap">
+      <span class="mono">React</span>
+      <span class="mono">Node.js</span>
+      <span class="mono">Next.js</span>
+      <span class="mono">Supabase</span>
+      <span class="mono">Figma</span>
+      <span class="mono">Git</span>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+        <p class="eyebrow" style="justify-content:center;">questions fréquentes</p>
+        <h2>Ce qu'on me demande souvent</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">Quels types de projets prenez-vous en charge ?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Sites vitrines, applications web sur mesure, site e-commerce , pour des indépendants, PME et institutions.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Combien de temps prend un projet type ?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Cela dépend du périmètre : un site vitrine prend en moyenne 2 à 3 semaines, une application complète de 6 à 12 semaines. Un délai précis est donné après le cadrage.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Travaillez-vous à distance ?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Oui, la majorité des projets sont menés à distance avec des points d'étape réguliers par appel ou messagerie.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Proposez-vous la maintenance après livraison ?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Oui, un accompagnement post-lancement est proposé : corrections, mises à jour et évolutions du produit.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Quelles technologies utilisez-vous principalement ?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Principalement React et Next.js côté web, Node.js pour les serveurs et API.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <p class="eyebrow">contact</p>
+        <h2>Discutons de votre projet.</h2>
+        <p>Une idée de site ou d'application ? Racontez-moi votre projet, je reviens vers vous rapidement.</p>
+
+        <div class="contact-item">
+          <div class="ic">✆</div>
+          <div><strong>Téléphone</strong><span>+241 62 90 24 05</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">✉</div>
+          <div><strong>Email</strong><span>mbadingasterge@gmail.com</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⚲</div>
+          <div><strong>Localisation</strong><span>Libreville, Gabon</span></div>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/Tonton-DXY" aria-label="GitHub">Gh</a>
+          <a href="https://www.linkedin.com/in/sterge-dorsel-mbadinga-mbadinga-43753a322/" aria-label="LinkedIn">In</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="field"><label for="cf-name">Nom</label><input id="cf-name" type="text" placeholder="Votre nom" required></div>
+          <div class="field"><label for="cf-email">Email</label><input id="cf-email" type="email" placeholder="vous@exemple.com" required></div>
+        </div>
+        <div class="field"><label for="cf-subject">Sujet</label><input id="cf-subject" type="text" placeholder="Objet du message"></div>
+        <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Parlez-moi de votre projet…" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+        <p class="form-note">Réponse sous 24 à 48h ouvrées.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> Sterge Dorsel Mbadinga. Tous droits réservés.</p>
+    <div class="foot-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">A propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
